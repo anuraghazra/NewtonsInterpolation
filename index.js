@@ -68,7 +68,7 @@ window.onload = function () {
   }
 
   // Forward Interpolation
-  let value = 60000;
+  let value = window.prompt('When the X is');
   let u = strip((value - x[0]) / (x[1] - x[0]));
   
   let sum = table[0][0];

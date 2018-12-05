@@ -41,7 +41,7 @@ window.onload = function () {
 
   for (let j = 1; j < n; j++) {
     for (let i = 0; i < n-j; i++) {
-      table[i][j] = strip((table[i + 1][j - 1]) - (table[i][j - 1]));
+      table[i][j] = ((table[i + 1][j - 1]) - (table[i][j - 1]));
     }
   }
 
@@ -55,14 +55,14 @@ window.onload = function () {
   //   str += '<br>'
   // }
   console.log(table)
-  str += 'x = ' + JSON.stringify(x) + '<br>';
-  str += 'y = ' + JSON.stringify(y) + '<br><br>';
+  str += 'X = ' + JSON.stringify(x) + '<br>';
+  str += 'Y = ' + JSON.stringify(y) + '<br><br>';
 
-  str += '--- Difference table --- <br>';
+  str += '--- Difference Table --- <br>';
 
   for (let i = 0; i < n; i++) {
     for (let j = 0; j < n - i; j++) {
-      str += ' | ' + table[i][j] + ' | ';
+      str += ' | ' + strip(table[i][j]) + ' | ';
     }
     str += '<br>'  
   }
